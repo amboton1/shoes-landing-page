@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.spacing > * + * {
+  margin-top: 2rem;
+}
+
+.container {
+  width: 85%;
+  max-width: 85rem;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  background-color: orange;
+  padding: .7rem 1.25rem;
+  border-radius: .25rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: opacity 175ms linear, -webkit-transform 250ms ease-in-out;
+  transition: opacity 175ms linear, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, opacity 175ms linear;
+  transition: transform 250ms ease-in-out, opacity 175ms linear, -webkit-transform 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: .9;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4.5rem);
+}
+
+.hero {
+  text-align: center;
+  color: white;
+  padding: 15em 0;
+  background-color: #222;
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url("../img/shoe-3.png"), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.split > * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 15rem;
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured__item {
+  display: block;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  position: relative;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  text-align: center;
+  color: #333;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.featured__item:hover, .featured__item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.featured__item:hover .featured__details, .featured__item:focus .featured__details {
+  opacity: 1;
+}
+
+.featured__item::after {
+  content: '';
+  position: absolute;
+  background: #2193b0;
+  top: 10%;
+  left: 10%;
+  z-index: -1;
+  border-radius: 50%;
+  padding: 75% 75% 0 0;
+}
+
+.featured__details {
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+}
+
+.featured__details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  opacity: 1;
+}
+
+.product {
+  background: orange;
+  padding: 3rem;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.product__title {
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.product__img {
+  margin: -2.5rem 0 0 0;
+}
+
+@media (min-width: 992px) {
+  .product {
+    text-align: left;
+  }
+  .product__img {
+    width: 50%;
+    float: right;
+  }
+}
+
+.product .buy-now {
+  background: green;
+}
+/*# sourceMappingURL=main.css.map */
